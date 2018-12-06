@@ -7,13 +7,12 @@ export default ({ data }) => (
   <div className={styles.hero}>
     <Img
       className={styles.heroImage}
-      alt={data.name}
+      alt={data.heroImage.description}
       sizes={data.heroImage.sizes}
     />
     <div className={styles.heroDetails}>
-      <h3 className={styles.heroHeadline}>{data.name}</h3>
-      <p className={styles.heroTitle}>{data.title}</p>
-      <p>{data.shortBio.shortBio}</p>
+      <h3 className={styles.heroHeadline}>{data.heroText}</h3>
+      <p className={styles.heroTitle}>{data.heroSubtext}</p>
     </div>
   </div>
 );

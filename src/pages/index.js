@@ -1,19 +1,20 @@
-import React from 'react';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
-import Hero from '../components/hero';
+import React from 'react';
+
 import ArticlePreview from '../components/article-preview';
+import Hero from '../components/hero';
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
     const posts = get(this, 'props.data.allContentfulBlogPost.edges');
-    const [author] = get(this, 'props.data.allContentfulPerson.edges');
+    const page = get(this, 'props.data.allContentfulPage.edges[0].node');
 
     return (
-      <div style={{ background: '#fff' }}>
+      <div>
         <Helmet title={siteTitle} />
-        <Hero data={author.node} />
+        <Hero data={page} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
@@ -38,7 +39,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      } 
+      }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
@@ -60,15 +61,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(filter: { id: { eq: "c15jwOBqpxqSAOy2eOO4S0m" } }) {
+    allContentfulPage(filter: { id: { eq: "c4VxwuqVJU4Yy6c8uIUaUaG" } }) {
       edges {
         node {
           name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
+          heroText
+          heroSubtext
+          heroImage {
+            description
             sizes(
               maxWidth: 1180
               maxHeight: 480
