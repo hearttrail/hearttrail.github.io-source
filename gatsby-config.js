@@ -20,7 +20,9 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
-  pathPrefix: '/gatsby-contentful-starter',
+  siteMetadata: {
+    title: 'Silo Heart Trail',
+  },
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
