@@ -100,6 +100,11 @@ export default class Navigation extends PureComponent {
           className={classNames(styles.menu, { [styles.isActive]: isMenuOpen })}
         >
           <li className={styles.menuItem}>
+            <Link className={styles.menuLink} to="/where">
+              Where
+            </Link>
+          </li>
+          <li className={styles.menuItem}>
             <Link className={styles.menuLink} to="/news">
               News
             </Link>
