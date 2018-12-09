@@ -1,9 +1,10 @@
 @import '../styles/mixins';
+@import '../styles/variables';
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto:400,900');
 
 body {
-  font-family: 'Noto Serif SC', serif;
+  font-family: $body-font;
   font-size: 1em;
   line-height: 1.65;
   color: #373F49;
@@ -19,7 +20,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: $heading-font;
   font-size: 2em;
   font-weight: 900;
 }
