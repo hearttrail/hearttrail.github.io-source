@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.button {
+  background-color: $orange;
+  border: 2px solid $black;
+  border-bottom-width: 5px;
+  border-radius: 10px;
+  color: $black;
+  display: inline-block;
+  font-family: $heading-font;
+  padding: 10px 15px;
+  text-decoration: none;
+
+  &:hover {
+    margin-top: 1px;
+    border-bottom-width: 4px;
+  }
+
+  &:active {
+    margin-top: 3px;
+    border-bottom-width: 2px;
+  }
+}
