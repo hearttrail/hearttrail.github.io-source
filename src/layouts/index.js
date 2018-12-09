@@ -1,5 +1,6 @@
 import React from 'react';
-import base from './base.scss';
+
+import '../styles/base.scss';
 import Navigation from '../components/navigation';
 
 class Template extends React.Component {
