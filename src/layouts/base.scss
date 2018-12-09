@@ -1,7 +1,9 @@
 @import '../styles/mixins';
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto:400,900');
+
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Noto Serif SC', serif;
   font-size: 1em;
   line-height: 1.65;
   color: #373F49;
@@ -17,8 +19,9 @@ img {
 h1,
 h2,
 h3 {
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 2em;
-  font-weight: normal;
+  font-weight: 900;
 }
 
 a {

@@ -35,6 +35,10 @@ export default class Navigation extends PureComponent {
   }
 
   handleResize() {
+    if (!window) {
+      return;
+    }
+
     this.setState({
       viewportHeight: window.innerHeight,
     });
