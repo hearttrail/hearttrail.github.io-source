@@ -1,0 +1,11 @@
+$hamburger-layer-color: currentColor;
+
+@import './styles/hamburgers';
+
+.hamburger {
+  color: #fff;
+
+  &.dark {
+    color: #000;
+  }
+}

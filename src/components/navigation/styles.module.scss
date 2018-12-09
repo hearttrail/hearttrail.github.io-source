@@ -9,7 +9,7 @@
   position: fixed;
   margin: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
 
   &::after {
     background: white;
@@ -44,12 +44,22 @@
 }
 
 .logo {
+  @include sm {
+    left: 0;
+    right: auto;
+  }
+
   height: 80%;
-  left: 0;
   position: absolute;
+  right: 10px;
   top: 10%;
   transition: opacity 0.3s;
   width: auto;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
 
   &.dark {
     opacity: 0;
@@ -57,5 +67,24 @@
 
   &.light {
     opacity: 1;
+  }
+}
+
+
+.menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  &.isActive {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+    z-index: -1;
   }
 }

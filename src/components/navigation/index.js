@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import Link from 'gatsby-link';
 import React, { PureComponent } from 'react';
 
+import Hamburger from '../hamburger';
 import logoDark from './images/logo-dark.svg';
 import logoLight from './images/logo-light.svg';
 import styles from './styles.module.scss';
@@ -12,12 +13,14 @@ export default class Navigation extends PureComponent {
     super(props);
 
     this.state = {
+      isMenuOpen: false,
       isTransparent: true,
       viewportHeight: 200,
     };
 
     this.handleResize = this.handleResize.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   componentWillMount() {
@@ -58,28 +61,39 @@ export default class Navigation extends PureComponent {
     }
   }
 
+  toggleMenu() {
+    this.setState(state => ({
+      isMenuOpen: !state.isMenuOpen,
+    }));
+  }
+
   render() {
-    const { isTransparent } = this.state;
+    const { isMenuOpen, isTransparent } = this.state;
 
     return (
       <nav
         role="navigation"
         className={classNames(styles.navigation, {
-          [styles.isTransparent]: isTransparent,
+          [styles.isTransparent]: isTransparent && !isMenuOpen,
         })}
       >
-        <Link to="/" className={styles.logoContainer}>
-          <img
-            src={logoDark}
-            className={classNames(styles.dark, styles.logo)}
-          />
-          <img
-            src={logoLight}
-            className={classNames(styles.light, styles.logo)}
-          />
-        </Link>
+        <Hamburger
+          isActive={isMenuOpen}
+          isDark={isMenuOpen || !isTransparent}
+          onClick={this.toggleMenu}
+        />
+        <div className={styles.logoContainer}>
+          <Link className={classNames(styles.dark, styles.logo)} to="/">
+            <img src={logoDark} />
+          </Link>
+          <Link className={classNames(styles.light, styles.logo)} to="/">
+            <img src={logoLight} />
+          </Link>
+        </div>
 
-        <ul className={styles.menu}>
+        <ul
+          className={classNames(styles.menu, { [styles.isActive]: isMenuOpen })}
+        >
           <li className={styles.menuItem}>
             <Link to="/news">News</Link>
           </li>
