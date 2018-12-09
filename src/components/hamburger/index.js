@@ -3,12 +3,17 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default ({ isActive, isDark, onClick }) => (
+export default ({ className, isActive, isDark, onClick }) => (
   <button
-    className={classNames(styles.hamburger, styles['hamburger--vortex'], {
-      [styles['is-active']]: isActive,
-      [styles.dark]: isDark,
-    })}
+    className={classNames(
+      className,
+      styles.hamburger,
+      styles['hamburger--vortex'],
+      {
+        [styles['is-active']]: isActive,
+        [styles.dark]: isDark,
+      }
+    )}
     onClick={onClick}
     type="button"
   >

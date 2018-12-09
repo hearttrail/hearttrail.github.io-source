@@ -78,6 +78,7 @@ export default class Navigation extends PureComponent {
         })}
       >
         <Hamburger
+          className={styles.hamburger}
           isActive={isMenuOpen}
           isDark={isMenuOpen || !isTransparent}
           onClick={this.toggleMenu}
@@ -95,7 +96,9 @@ export default class Navigation extends PureComponent {
           className={classNames(styles.menu, { [styles.isActive]: isMenuOpen })}
         >
           <li className={styles.menuItem}>
-            <Link to="/news">News</Link>
+            <Link className={styles.menuLink} to="/news">
+              News
+            </Link>
           </li>
         </ul>
       </nav>
