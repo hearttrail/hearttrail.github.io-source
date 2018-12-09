@@ -3,7 +3,10 @@ import Helmet from 'react-helmet';
 import React from 'react';
 
 import ArticlePreview from '../components/article-preview';
+import Button from '../components/button';
+import constants from '../constants';
 import Hero from '../components/hero';
+import styles from './index.module.scss';
 
 class RootIndex extends React.Component {
   render() {
@@ -15,6 +18,11 @@ class RootIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <Hero data={page} />
+        <div className={styles.ctaContainer}>
+          <Button href={constants.DONOR_REGISTER_URL}>
+            Join the donor register today
+          </Button>
+        </div>
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
