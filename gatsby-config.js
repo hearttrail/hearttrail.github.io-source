@@ -25,6 +25,7 @@ module.exports = {
     title: 'Silo Heart Trail',
   },
   plugins: [
+    'gatsby-plugin-sass',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
