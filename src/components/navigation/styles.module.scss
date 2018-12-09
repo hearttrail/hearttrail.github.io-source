@@ -1,0 +1,62 @@
+@import '../../styles/mixins';
+
+.navigation {
+  display: flex;
+  height: 60px;
+  padding: 0;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  z-index: 1;
+
+  // @include sm {
+    
+  // }
+
+  &::after {
+    background: white;
+    content: '';
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.3s;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &.isTransparent {
+    &::after {
+      opacity: 0;
+    }
+
+    .logo {
+      &.dark {
+        opacity: 1;
+      }
+
+      &.light {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.logoContainer {
+  height: 100%;
+  padding: 0 10px;
+  position: relative;
+}
+
+.logo {
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.3s;
+  width: auto;
+
+  &.dark {
+    opacity: 0;
+  }
+
+  &.light {
+    opacity: 1;
+  }
+}
