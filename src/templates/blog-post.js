@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import get from 'lodash/get';
 import Img from 'gatsby-image';
 
-import heroStyles from '../components/hero.module.css';
+import heroStyles from '../components/hero/styles.module.scss';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -47,7 +47,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      } 
+      }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
       title

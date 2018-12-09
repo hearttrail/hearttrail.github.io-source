@@ -6,6 +6,7 @@ import logoDark from './images/logo-dark.svg';
 import logoLight from './images/logo-light.svg';
 import styles from './styles.module.scss';
 
+const NAV_HEIGHT = 60;
 export default class Navigation extends PureComponent {
   constructor(props) {
     super(props);
@@ -43,11 +44,14 @@ export default class Navigation extends PureComponent {
 
     const { isTransparent, viewportHeight } = this.state;
 
-    if (window.pageYOffset >= viewportHeight && isTransparent) {
+    if (window.pageYOffset >= viewportHeight - NAV_HEIGHT && isTransparent) {
       this.setState({
         isTransparent: false,
       });
-    } else if (window.pageYOffset < viewportHeight && !isTransparent) {
+    } else if (
+      window.pageYOffset < viewportHeight - NAV_HEIGHT &&
+      !isTransparent
+    ) {
       this.setState({
         isTransparent: true,
       });

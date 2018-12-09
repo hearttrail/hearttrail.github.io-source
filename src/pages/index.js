@@ -69,6 +69,9 @@ export const pageQuery = graphql`
           heroSubtext
           heroImage {
             description
+            file {
+              url
+            }
             sizes(
               maxWidth: 1180
               maxHeight: 480

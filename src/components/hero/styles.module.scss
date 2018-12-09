@@ -1,0 +1,23 @@
+.hero {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+
+  .image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+  }
+
+  .heroDetails {
+    z-index: 1;
+  }
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
-import styles from './hero.module.css';
+import styles from './styles.module.scss';
 
 export default ({ data }) => (
   <div className={styles.hero}>
-    <Img
-      className={styles.heroImage}
-      alt={data.heroImage.description}
-      sizes={data.heroImage.sizes}
+    <div
+      className={styles.image}
+      style={{ backgroundImage: `url(${data.heroImage.file.url})` }}
     />
     <div className={styles.heroDetails}>
       <h3 className={styles.heroHeadline}>{data.heroText}</h3>
