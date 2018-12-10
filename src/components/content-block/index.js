@@ -14,7 +14,7 @@ export default ({ children, image }) => (
     </div>
     <div
       className={styles.imageContainer}
-      style={{ backgroundImage: `url(${image.src}` }}
+      style={{ backgroundImage: `url(${image.src})` }}
     />
   </div>
 );
