@@ -32,10 +32,11 @@ class RootIndex extends React.Component {
           </h2>
           <p>
             The heart trail is a self-imposed challenge set by the recipient of
-            life-changing gift: a heart. Over a weekend in January 2019, a group
-            of decidedly novice cyclists will set out to ride the 200km Silo Art
-            Trail in rural Victoria, Australia. The purpose? To show that organ
-            donation can be absolutely life-changing.
+            life-changing gift: <strong>a heart</strong>. Over a weekend in
+            January 2019, a group of decidedly novice cyclists will set out to
+            ride the 200km Silo Art Trail in rural Victoria, Australia. The
+            purpose? To show that organ donation can be absolutely
+            life-changing.
           </p>
           <Button
             className={styles.ctaButton}
