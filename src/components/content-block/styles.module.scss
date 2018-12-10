@@ -28,11 +28,12 @@
 
 .imageContainer {
   @include md {
-    max-width: 30%;
-    width: 400px;
+    max-width: 35%;
+    width: 500px;
   }
 
   background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 600px;
   width: 100%;
