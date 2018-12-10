@@ -68,7 +68,6 @@ export default class Hero extends PureComponent {
           }}
         >
           <h1 className={styles.heroText}>{data.heroText}</h1>
-          <p className={styles.heroSubtext}>{data.heroSubtext}</p>
         </div>
       </div>
     );
