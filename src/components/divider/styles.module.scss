@@ -1,0 +1,20 @@
+.divider {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &:before {
+    border-bottom: 7px solid black;
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 140px;
+  }
+}
+
+.line {
+  height: 60px;
+  margin: 0 -10px;
+  width: 156px;
+}

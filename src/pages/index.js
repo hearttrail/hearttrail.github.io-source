@@ -5,6 +5,7 @@ import React from 'react';
 import ArticlePreview from '../components/article-preview';
 import Button from '../components/button';
 import ContentBlock from '../components/content-block';
+import Divider from '../components/divider';
 import constants from '../constants';
 import Hero from '../components/hero';
 import Map from '../components/map';
@@ -91,6 +92,7 @@ class RootIndex extends React.Component {
             wizard, Harry Doxycide the woes of Mrs. Weasley Goblet of Fire.
           </ContentBlock>
         </div>
+        <Divider />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
