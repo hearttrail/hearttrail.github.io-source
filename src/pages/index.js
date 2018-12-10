@@ -9,6 +9,7 @@ import Divider from '../components/divider';
 import constants from '../constants';
 import Hero from '../components/hero';
 import Map from '../components/map';
+import Quote from '../components/quote';
 import QuoteBlock from '../components/quote-block';
 import styles from './index.module.scss';
 
@@ -57,21 +58,30 @@ class RootIndex extends React.Component {
               src: BikeCloseUpImage,
             }}
           >
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus. So thirsty, deluminator firs’ years follow me 12 inches of
-            parchment. Head Boy start-of-term banquet Cleansweep Seven roaring
-            lion hat. Unicorn blood crossbow mars is bright tonight, feast
-            Norwegian Ridgeback. Come seek us where our voices sound, we cannot
-            sing above the ground, Ginny Weasley bright red. Fanged frisbees,
-            phoenix tears good clean match. Toad-like smile Flourish and Blotts
-            he knew I’d come back Quidditch World Cup. Fat Lady baubles banana
-            fritters fairy lights Petrificus Totalus. So thirsty, deluminator
-            firs’ years follow me 12 inches of parchment. Head Boy start-of-term
-            banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow
-            mars is bright tonight, feast Norwegian Ridgeback. Come seek us
-            where our voices sound, we cannot sing above the ground, Ginny
-            Weasley bright red. Fanged frisbees, phoenix tears good clean match.
+            <p>
+              Toad-like smile Flourish and Blotts he knew I’d come back
+              Quidditch World Cup. Fat Lady baubles banana fritters fairy lights
+              Petrificus Totalus. So thirsty, deluminator firs’ years follow me
+              12 inches of parchment. Head Boy start-of-term banquet Cleansweep
+              Seven roaring lion hat.
+            </p>
+            <Quote>
+              Unicorn blood crossbow mars is bright tonight, feast Norwegian
+              Ridgeback.
+            </Quote>
+            <p>
+              Come seek us where our voices sound, we cannot sing above the
+              ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+              good clean match. Toad-like smile Flourish and Blotts he knew I’d
+              come back Quidditch World Cup. Fat Lady baubles banana fritters
+              fairy lights Petrificus Totalus. So thirsty, deluminator firs’
+              years follow me 12 inches of parchment. Head Boy start-of-term
+              banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow
+              mars is bright tonight, feast Norwegian Ridgeback. Come seek us
+              where our voices sound, we cannot sing above the ground, Ginny
+              Weasley bright red. Fanged frisbees, phoenix tears good clean
+              match.
+            </p>
           </ContentBlock>
         </div>
         <div className="wrapper">
@@ -82,15 +92,18 @@ class RootIndex extends React.Component {
               src: JamesRecoveryImage,
             }}
           >
-            Half-giant jinxes peg-leg gillywater broken glasses large black dog
-            Great Hall. Nearly-Headless Nick now string them together, and
-            answer me this, which creature would you be unwilling to kiss?
-            Poltergeist sticking charm, troll umbrella stand flying cars golden
-            locket Lily Potter. Pumpkin juice Trevor wave your wand out glass
-            orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul
-            Muggle-Born large order of drills the trace. Bred in captivity fell
-            through the veil, quaffle blue flame ickle diddykins Aragog. Yer a
-            wizard, Harry Doxycide the woes of Mrs. Weasley Goblet of Fire.
+            <p>
+              Half-giant jinxes peg-leg gillywater broken glasses large black
+              dog Great Hall. Nearly-Headless Nick now string them together, and
+              answer me this, which creature would you be unwilling to kiss?
+              Poltergeist sticking charm, troll umbrella stand flying cars
+              golden locket Lily Potter. Pumpkin juice Trevor wave your wand out
+              glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck
+              his soul Muggle-Born large order of drills the trace. Bred in
+              captivity fell through the veil, quaffle blue flame ickle
+              diddykins Aragog. Yer a wizard, Harry Doxycide the woes of Mrs.
+              Weasley Goblet of Fire.
+            </p>
           </ContentBlock>
         </div>
         <Divider />
