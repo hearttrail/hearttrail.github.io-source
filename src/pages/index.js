@@ -6,6 +6,8 @@ import ArticlePreview from '../components/article-preview';
 import Button from '../components/button';
 import constants from '../constants';
 import Hero from '../components/hero';
+import Map from '../components/map';
+import QuoteBlock from '../components/quote-block';
 import styles from './index.module.scss';
 
 class RootIndex extends React.Component {
@@ -18,12 +20,25 @@ class RootIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <Hero data={page} />
+        <QuoteBlock>
+          <h2>
+            A bike ride to raise awareness of the value of organ&nbsp;donation
+          </h2>
+          <p>
+            The heart trail is a self-imposed challenge set by the recipient of
+            life-changing gift: a heart. Over a weekend in January 2019, a group
+            of decidedly novice cyclists will set out to ride the 200km Silo Art
+            Trail in rural Victoria, Australia. The purpose? To show that organ
+            donation can be absolutely life-changing.
+          </p>
           <Button
             className={styles.ctaButton}
             href={constants.DONOR_REGISTER_URL}
           >
             Join the donor register today
           </Button>
+        </QuoteBlock>
+        <Map />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
