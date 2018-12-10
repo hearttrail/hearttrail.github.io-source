@@ -18,11 +18,12 @@ class RootIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <Hero data={page} />
-        <div className={styles.ctaContainer}>
-          <Button href={constants.DONOR_REGISTER_URL}>
+          <Button
+            className={styles.ctaButton}
+            href={constants.DONOR_REGISTER_URL}
+          >
             Join the donor register today
           </Button>
-        </div>
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">

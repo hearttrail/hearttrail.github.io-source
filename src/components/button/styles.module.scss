@@ -2,8 +2,7 @@
 
 .button {
   background-color: $orange;
-  border: 2px solid $black;
-  border-bottom-width: 5px;
+  border: 1px solid $black;
   border-radius: 10px;
   color: $black;
   display: inline-block;
@@ -12,12 +11,10 @@
   text-decoration: none;
 
   &:hover {
-    margin-top: 1px;
-    border-bottom-width: 4px;
+    background-color: darken($orange, 5%);
   }
 
   &:active {
-    margin-top: 3px;
-    border-bottom-width: 2px;
+    background-color: darken($orange, 10%);
   }
 }
