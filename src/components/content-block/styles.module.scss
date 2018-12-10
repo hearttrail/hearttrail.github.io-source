@@ -1,0 +1,44 @@
+@import '../../styles/mixins';
+
+.contentBlock {
+  @include md {
+    flex-direction: row;
+
+    &.imageLeft {
+      flex-direction: row-reverse;
+    }  
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contentContainer {
+  @include md {
+    flex: 1;
+    padding: 0 2rem;
+  }
+
+  padding: 2rem 0;
+}
+
+.content {
+  max-width: 700px;
+}
+
+.imageContainer {
+  @include md {
+    max-width: 30%;
+    width: 400px;
+  }
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 100%;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+}
