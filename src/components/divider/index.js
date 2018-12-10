@@ -7,6 +7,7 @@ import LineImage from './images/line.svg';
 
 export default () => (
   <div className={styles.divider}>
+    <img className={styles.bike} src={BikeImage} />
     <img className={styles.line} src={LineImage} />
   </div>
 );
