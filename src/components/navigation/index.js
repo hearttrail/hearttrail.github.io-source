@@ -23,7 +23,7 @@ export default class Navigation extends PureComponent {
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.handleResize();
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);

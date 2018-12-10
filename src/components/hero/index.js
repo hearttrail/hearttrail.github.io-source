@@ -16,7 +16,7 @@ export default class Hero extends PureComponent {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.handleResize();
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('resize', this.handleResize);
