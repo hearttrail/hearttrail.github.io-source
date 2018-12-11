@@ -1,9 +1,9 @@
 @import '../../styles/variables';
 
 .button {
-  background-color: darken($orange, 10%);
+  background-color: darken($purple, 10%);
   
-  border-radius: 10px;
+  border-radius: 5px;
   color: $white;
   display: inline-block;
   font-family: $heading-font;
@@ -11,10 +11,10 @@
   text-decoration: none;
 
   &:hover {
-    background-color: darken($orange, 5%);
+    background-color: darken($purple, 5%);
   }
 
   &:active {
-    background-color: $orange;
+    background-color: $purple;
   }
 }
