@@ -1,6 +1,8 @@
 .quoteBlock {
   padding: 2rem 3rem;
   text-align: center;
+
+  @import '../../styles/backgrounds';
 }
 
 .contentContainer {
