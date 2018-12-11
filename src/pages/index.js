@@ -8,6 +8,7 @@ import ContentBlock from '../components/content-block';
 import Divider from '../components/divider';
 import constants from '../constants';
 import Hero from '../components/hero';
+import ImageBlock from '../components/image-block';
 import Map from '../components/map';
 import Quote from '../components/quote';
 import QuoteBlock from '../components/quote-block';
@@ -27,7 +28,7 @@ class RootIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <Hero data={page} />
-        <QuoteBlock>
+        <QuoteBlock background="red">
           <h2>
             A bike ride to raise awareness of the value of organ&nbsp;donation
           </h2>
@@ -47,65 +48,132 @@ class RootIndex extends React.Component {
           </Button>
         </QuoteBlock>
         <Map />
-        <div className="wrapper">
-          <img src={JamesSiloImage} alt="James in front of a silo" />
-        </div>
-        <div className="wrapper">
-          <ContentBlock
-            image={{
-              align: 'right',
-              alt: 'Bike with silo in background',
-              src: BikeCloseUpImage,
-            }}
-          >
-            <p>
-              Toad-like smile Flourish and Blotts he knew I’d come back
-              Quidditch World Cup. Fat Lady baubles banana fritters fairy lights
-              Petrificus Totalus. So thirsty, deluminator firs’ years follow me
-              12 inches of parchment. Head Boy start-of-term banquet Cleansweep
-              Seven roaring lion hat.
-            </p>
-            <Quote>
-              Unicorn blood crossbow mars is bright tonight, feast Norwegian
-              Ridgeback.
-            </Quote>
-            <p>
-              Come seek us where our voices sound, we cannot sing above the
-              ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-              good clean match. Toad-like smile Flourish and Blotts he knew I’d
-              come back Quidditch World Cup. Fat Lady baubles banana fritters
-              fairy lights Petrificus Totalus. So thirsty, deluminator firs’
-              years follow me 12 inches of parchment. Head Boy start-of-term
-              banquet Cleansweep Seven roaring lion hat. Unicorn blood crossbow
-              mars is bright tonight, feast Norwegian Ridgeback. Come seek us
-              where our voices sound, we cannot sing above the ground, Ginny
-              Weasley bright red. Fanged frisbees, phoenix tears good clean
-              match.
-            </p>
-          </ContentBlock>
-        </div>
-        <div className="wrapper">
-          <ContentBlock
-            image={{
-              align: 'left',
-              alt: 'James on the road to recovery',
-              src: JamesRecoveryImage,
-            }}
-          >
-            <p>
-              Half-giant jinxes peg-leg gillywater broken glasses large black
-              dog Great Hall. Nearly-Headless Nick now string them together, and
-              answer me this, which creature would you be unwilling to kiss?
-              Poltergeist sticking charm, troll umbrella stand flying cars
-              golden locket Lily Potter. Pumpkin juice Trevor wave your wand out
-              glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck
-              his soul Muggle-Born large order of drills the trace. Bred in
-              captivity fell through the veil, quaffle blue flame ickle
-              diddykins Aragog. Yer a wizard, Harry Doxycide the woes of Mrs.
-              Weasley Goblet of Fire.
-            </p>
-          </ContentBlock>
-        </div>
+        <ImageBlock
+          image={{
+            alt: 'James with silo in background',
+            src: JamesSiloImage,
+          }}
+        />
+        <ContentBlock
+          background="green"
+          image={{
+            align: 'right',
+            alt: 'James recovering in hospital',
+            src: JamesRecoveryImage,
+          }}
+        >
+          <p>
+            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
+            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
+            Totalus.
+          </p>
+          <Quote>
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian
+            Ridgeback.
+          </Quote>
+          <p>
+            Come seek us where our voices sound, we cannot sing above the
+            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+            good clean match. Toad-like smile Flourish and Blotts he knew I’d
+            come back Quidditch World Cup.
+          </p>
+        </ContentBlock>
+        <ContentBlock
+          background="purple"
+          image={{
+            align: 'left',
+            alt: 'Bike with silo in background',
+            src: BikeCloseUpImage,
+          }}
+        >
+          <p>
+            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
+            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
+            Totalus.
+          </p>
+          <Quote>
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian
+            Ridgeback.
+          </Quote>
+          <p>
+            Come seek us where our voices sound, we cannot sing above the
+            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+            good clean match. Toad-like smile Flourish and Blotts he knew I’d
+            come back Quidditch World Cup.
+          </p>
+        </ContentBlock>
+        <ContentBlock
+          background="orange"
+          image={{
+            align: 'right',
+            alt: 'Bike with silo in background',
+            src: BikeCloseUpImage,
+          }}
+        >
+          <p>
+            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
+            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
+            Totalus.
+          </p>
+          <Quote>
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian
+            Ridgeback.
+          </Quote>
+          <p>
+            Come seek us where our voices sound, we cannot sing above the
+            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+            good clean match. Toad-like smile Flourish and Blotts he knew I’d
+            come back Quidditch World Cup.
+          </p>
+        </ContentBlock>
+        <ContentBlock
+          background="yellow"
+          image={{
+            align: 'left',
+            alt: 'Bike with silo in background',
+            src: BikeCloseUpImage,
+          }}
+        >
+          <p>
+            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
+            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
+            Totalus.
+          </p>
+          <Quote>
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian
+            Ridgeback.
+          </Quote>
+          <p>
+            Come seek us where our voices sound, we cannot sing above the
+            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+            good clean match. Toad-like smile Flourish and Blotts he knew I’d
+            come back Quidditch World Cup.
+          </p>
+        </ContentBlock>
+        <ContentBlock
+          background="red"
+          image={{
+            align: 'right',
+            alt: 'Bike with silo in background',
+            src: BikeCloseUpImage,
+          }}
+        >
+          <p>
+            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
+            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
+            Totalus.
+          </p>
+          <Quote>
+            Unicorn blood crossbow mars is bright tonight, feast Norwegian
+            Ridgeback.
+          </Quote>
+          <p>
+            Come seek us where our voices sound, we cannot sing above the
+            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
+            good clean match. Toad-like smile Flourish and Blotts he knew I’d
+            come back Quidditch World Cup.
+          </p>
+        </ContentBlock>
         <Divider />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
