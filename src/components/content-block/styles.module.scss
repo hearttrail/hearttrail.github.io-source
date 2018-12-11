@@ -9,6 +9,7 @@
     }  
   }
 
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
 
@@ -18,10 +19,10 @@
 .contentContainer {
   @include md {
     flex: 1;
-    padding: 0 2rem;
+    padding: 4rem;
   }
 
-  padding: 2rem 0;
+  padding: 3rem 2rem;
 }
 
 .content {
@@ -30,18 +31,13 @@
 
 .imageContainer {
   @include md {
-    max-width: 35%;
-    width: 500px;
+    align-self: stretch;
+    width: 40%;
   }
 
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  height: 600px;
-  width: 100%;
-}
-
-.image {
-  height: auto;
+  min-height: 600px;
   width: 100%;
 }
