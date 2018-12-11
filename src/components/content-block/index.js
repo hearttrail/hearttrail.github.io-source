@@ -3,10 +3,11 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-export default ({ children, image }) => (
+export default ({ background, children, image }) => (
   <div
     className={classNames(styles.contentBlock, {
       [styles.imageLeft]: image.align === 'left',
+      [styles[background]]: background,
     })}
   >
     <div className={styles.contentContainer}>
