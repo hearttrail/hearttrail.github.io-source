@@ -17,7 +17,7 @@ export default () => (
       />
     </Link>
 
-    <CtaButton href={constants.DONOR_REGISTER_URL}>
+    <CtaButton className={styles.ctaButton} href={constants.DONOR_REGISTER_URL}>
       Join the donor register
     </CtaButton>
   </nav>
