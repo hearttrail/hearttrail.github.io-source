@@ -1,132 +1,27 @@
 @import '../../styles/mixins';
 
 .navigation {
-  border-bottom: 1px solid #ddd;
+  align-items: center;
   color: #000;
   display: flex;
-  height: 60px;
+  height: 85px;
   justify-content: space-between;
-  padding: 0;
+  padding: 1rem;
   position: fixed;
   margin: 0;
   width: 100%;
   z-index: 1000;
-
-  &::after {
-    background: #fff;
-    content: '';
-    height: 100%;
-    position: absolute;
-    transition: opacity 0.3s;
-    width: 100%;
-    z-index: -1;
-  }
-
-  &.isTransparent {
-    color: #fff;
-
-    &::after {
-      opacity: 0;
-    }
-
-    .logo {
-      &.dark {
-        opacity: 1;
-      }
-
-      &.light {
-        opacity: 0;
-      }
-    }
-  }
-}
-
-.hamburger {
-  @include sm {
-    display: none;
-  }
 }
 
 .logoContainer {
-  height: 100%;
-  position: relative;
+  height: 80%;
 }
 
 .logo {
-  @include sm {
-    left: 10px;
-    right: auto;
-  }
-
-  height: 80%;
-  position: absolute;
-  right: 10px;
-  top: 10%;
-  transition: opacity 0.3s;
+  height: 100%;
   width: auto;
-
-  img {
-    height: 100%;
-    width: auto;
-  }
-
-  &.dark {
-    opacity: 0;
-  }
-
-  &.light {
-    opacity: 1;
-  }
 }
 
-.menu {
-  @include sm {
-    display: flex;
-  }
-
-  display: none;
-  font-family: 'Roboto', Helvetica, sans-serif;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  &.isActive {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    position: fixed;
-    text-align: center;
-    width: 100vw;
-    z-index: -1;
-  }
-
-  .menuItem {
-    @include sm {
-      align-items: stretch;
-      display: flex;
-      height: 100%;
-      padding: 0;
-    }
-
-    padding: 10px 0;
-  }
-
-  .menuLink {
-    @include sm {
-      display: flex;
-      flex-direction: column;
-      font-size: 0.9rem;
-      justify-content: center;
-      padding: 0 20px;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
-    text-transform: uppercase;
-    text-decoration: none;  
-  }
+.ctaButton {
+  box-shadow: 0 5px 10px 0px rgba(0,0,0,0.3);
 }
