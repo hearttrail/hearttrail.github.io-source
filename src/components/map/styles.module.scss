@@ -1,0 +1,14 @@
+@import '../../styles/mixins';
+
+.mapContainer {
+  @include sm {
+    flex-direction: row;
+  }
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  & > div {
+    flex: 1;
+  }
+}
