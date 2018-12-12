@@ -1,20 +1,22 @@
 @import '../../styles/variables';
 
 .button {
-  background-color: darken($purple, 10%);
-  
+  background-color: $red;
   border-radius: 5px;
-  color: $white;
+  color: $off-white;
   display: inline-block;
   font-family: $heading-font;
+  font-style: italic;
+  letter-spacing: 1px;
   padding: 10px 15px;
   text-decoration: none;
+  text-transform: uppercase;
 
   &:hover {
-    background-color: darken($purple, 5%);
+    background-color: darken($red, 5%);
   }
 
   &:active {
-    background-color: $purple;
+    background-color: darken($red, 10%);
   }
 }
