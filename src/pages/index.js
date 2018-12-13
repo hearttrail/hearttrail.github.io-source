@@ -3,15 +3,16 @@ import Helmet from 'react-helmet';
 import React from 'react';
 
 import ArticlePreview from '../components/article-preview';
-import Button from '../components/button';
 import ContentBlock from '../components/content-block';
-import Divider from '../components/divider';
 import constants from '../constants';
+import CtaButton from '../components/cta-button';
+import Divider from '../components/divider';
 import Hero from '../components/hero';
 import ImageBlock from '../components/image-block';
 import Map from '../components/map';
 import Quote from '../components/quote';
 import QuoteBlock from '../components/quote-block';
+import Stats from '../components/stats';
 import styles from './index.module.scss';
 
 import BikeCloseUpImage from '../images/bike-close-up.jpg';
@@ -28,7 +29,7 @@ class RootIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         <Hero data={page} />
-        <QuoteBlock background="red">
+        <QuoteBlock>
           <h2>
             A bike ride to raise awareness of the value of organ&nbsp;donation
           </h2>
@@ -40,22 +41,17 @@ class RootIndex extends React.Component {
             purpose? To show that organ donation can be absolutely
             life-changing.
           </p>
-          <Button
+          <CtaButton
             className={styles.ctaButton}
             href={constants.DONOR_REGISTER_URL}
           >
             Join the donor register today
-          </Button>
+          </CtaButton>
         </QuoteBlock>
+        <Divider />
         <Map />
-        <ImageBlock
-          image={{
-            alt: 'James with silo in background',
-            src: JamesSiloImage,
-          }}
-        />
         <ContentBlock
-          background="green"
+          background="yellow"
           image={{
             align: 'right',
             alt: 'James recovering in hospital',
@@ -63,21 +59,23 @@ class RootIndex extends React.Component {
           }}
         >
           <p>
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus.
+            In the space of a three year period James went from being relatively
+            healthy to losing a third of his body weight, being unable to walk
+            and reliant on a wheelchair. After several months in several
+            hospitals across Melbourne, was diagnosed with Cardiomyopathy and
+            was put on the heart transplant waiting list. Doctors had some dire
+            warnings:
           </p>
           <Quote>
-            Unicorn blood crossbow mars is bright tonight, feast Norwegian
-            Ridgeback.
+            There is a chance you will die before a heart becomes available.
           </Quote>
           <p>
-            Come seek us where our voices sound, we cannot sing above the
-            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-            good clean match. Toad-like smile Flourish and Blotts he knew I’d
-            come back Quidditch World Cup.
+            8 months later the phone rang. James had one hour to be at the
+            Alfred hospital. They had a heart for him. After a week in ICU and
+            another week on the ward James was sent home.
           </p>
         </ContentBlock>
+        <Stats />
         <ContentBlock
           background="purple"
           image={{
@@ -87,94 +85,30 @@ class RootIndex extends React.Component {
           }}
         >
           <p>
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus.
+            Physios advised James needed to find a hobby that would keep him fit
+            and healthy, and cycling was it. He now has a new lease on life,
+            allowing him to stay fit and active, enjoy time with family and
+            friends, and look forward to the future. He was lucky that a heart
+            became available in time, but others in Australia are often not so
+            lucky.
+          </p>
+          <p>
+            Heart trail aims to better the odds for those that are waiting. We
+            hope to start the conversation for people to discuss their
+            preferences with their loved ones and to hopefully decide to
+            register.
           </p>
           <Quote>
-            Unicorn blood crossbow mars is bright tonight, feast Norwegian
-            Ridgeback.
+            Whether we encourage 1 person or 1000 people to register, lives will
+            be changed.
           </Quote>
           <p>
-            Come seek us where our voices sound, we cannot sing above the
-            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-            good clean match. Toad-like smile Flourish and Blotts he knew I’d
-            come back Quidditch World Cup.
+            Registering is just the beginning. Discussing your organ donation
+            preferences with loved ones is equally important as they will have
+            the final say.
           </p>
         </ContentBlock>
-        <ContentBlock
-          background="orange"
-          image={{
-            align: 'right',
-            alt: 'Bike with silo in background',
-            src: BikeCloseUpImage,
-          }}
-        >
-          <p>
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus.
-          </p>
-          <Quote>
-            Unicorn blood crossbow mars is bright tonight, feast Norwegian
-            Ridgeback.
-          </Quote>
-          <p>
-            Come seek us where our voices sound, we cannot sing above the
-            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-            good clean match. Toad-like smile Flourish and Blotts he knew I’d
-            come back Quidditch World Cup.
-          </p>
-        </ContentBlock>
-        <ContentBlock
-          background="yellow"
-          image={{
-            align: 'left',
-            alt: 'Bike with silo in background',
-            src: BikeCloseUpImage,
-          }}
-        >
-          <p>
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus.
-          </p>
-          <Quote>
-            Unicorn blood crossbow mars is bright tonight, feast Norwegian
-            Ridgeback.
-          </Quote>
-          <p>
-            Come seek us where our voices sound, we cannot sing above the
-            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-            good clean match. Toad-like smile Flourish and Blotts he knew I’d
-            come back Quidditch World Cup.
-          </p>
-        </ContentBlock>
-        <ContentBlock
-          background="red"
-          image={{
-            align: 'right',
-            alt: 'Bike with silo in background',
-            src: BikeCloseUpImage,
-          }}
-        >
-          <p>
-            Toad-like smile Flourish and Blotts he knew I’d come back Quidditch
-            World Cup. Fat Lady baubles banana fritters fairy lights Petrificus
-            Totalus.
-          </p>
-          <Quote>
-            Unicorn blood crossbow mars is bright tonight, feast Norwegian
-            Ridgeback.
-          </Quote>
-          <p>
-            Come seek us where our voices sound, we cannot sing above the
-            ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears
-            good clean match. Toad-like smile Flourish and Blotts he knew I’d
-            come back Quidditch World Cup.
-          </p>
-        </ContentBlock>
-        <Divider />
+
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
           <ul className="article-list">
