@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import Img from 'gatsby-image';
 
 import styles from './styles.module.scss';
+import TitleImage from '../../images/title.png';
 
 export default class Hero extends PureComponent {
   constructor(props) {
@@ -55,11 +56,10 @@ export default class Hero extends PureComponent {
     const { percentageScrolled } = this.state;
 
     return (
-      <div className={styles.hero}>
-        <div
-          className={styles.image}
-          style={{ backgroundImage: `url(${data.heroImage.file.url})` }}
-        />
+      <div
+        className={styles.hero}
+        style={{ backgroundImage: `url(${data.heroImage.file.url})` }}
+      >
         <div
           className={styles.heroDetails}
           style={{
@@ -67,7 +67,11 @@ export default class Hero extends PureComponent {
             transform: `translateY(${percentageScrolled * 30}vh)`,
           }}
         >
-          <h1 className={styles.heroText}>{data.heroText}</h1>
+          <img
+            alt="Silo Heart Trail"
+            className={styles.title}
+            src={TitleImage}
+          />
         </div>
       </div>
     );
