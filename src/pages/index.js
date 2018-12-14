@@ -1,5 +1,4 @@
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import React from 'react';
 
 import ArticlePreview from '../components/article-preview';
@@ -8,26 +7,25 @@ import constants from '../constants';
 import CtaButton from '../components/cta-button';
 import Divider from '../components/divider';
 import Hero from '../components/hero';
-import ImageBlock from '../components/image-block';
 import Map from '../components/map';
 import Quote from '../components/quote';
 import QuoteBlock from '../components/quote-block';
+import Seo from '../components/seo';
 import Stats from '../components/stats';
 import styles from './index.module.scss';
 
 import BikeCloseUpImage from '../images/bike-close-up.jpg';
 import JamesRecoveryImage from '../images/james-recovery.jpg';
-import JamesSiloImage from '../images/james-sheppard.jpg';
 
 class RootIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title');
+    const siteMetadata = get(this.props, 'data.site.siteMetadata');
     const posts = get(this, 'props.data.allContentfulBlogPost.edges');
     const page = get(this, 'props.data.allContentfulPage.edges[0].node');
 
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Seo {...siteMetadata} />
         <Hero data={page} />
         <QuoteBlock>
           <h2>
@@ -36,9 +34,9 @@ class RootIndex extends React.Component {
           <p>
             The heart trail is a self-imposed challenge set by the recipient of
             life-changing gift: <strong>a heart</strong>. Over a weekend in
-            January 2019, a group of decidedly novice cyclists will set out to
-            ride the 200km Silo Art Trail in rural Victoria, Australia. The
-            purpose? To show that organ donation can be absolutely
+            January 2019, James Sheppard and a group of his closest friends and
+            family will set out to ride the 200km Silo Art Trail in rural
+            Victoria. The purpose? To show that organ donation can be absolutely
             life-changing.
           </p>
           <CtaButton
@@ -110,7 +108,7 @@ class RootIndex extends React.Component {
         </ContentBlock>
 
         <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
+          <h2 className="section-headline">Updates</h2>
           <ul className="article-list">
             {posts.map(({ node }) => {
               return (
@@ -133,6 +131,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
+        url
+        image
+        twitterUsername
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
