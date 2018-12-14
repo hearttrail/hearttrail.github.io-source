@@ -2,7 +2,7 @@
   "name": "Heart Trail",
   "description": "Website for the Silo Heart Trail.",
   "keywords": [],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/hearttrail/hearttrail.github.io-source",
   "success_url": "/",
   "buildpacks": [
     {
