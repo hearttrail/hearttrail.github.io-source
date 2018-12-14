@@ -1,14 +1,17 @@
 @import '../styles/mixins';
 @import '../styles/variables';
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC|Roboto:400,900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500,500i');
+
+* { box-sizing: border-box; }
 
 body {
+  background-color: #f7f5f0;
+  color: #373F49;
   font-family: $body-font;
   font-size: 1em;
   line-height: 2;
-  color: #373F49;
-  background: #eee;
   margin: 0;
 }
 
