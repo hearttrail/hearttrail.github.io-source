@@ -67,11 +67,8 @@ export default class Hero extends PureComponent {
             transform: `translateY(${percentageScrolled * 30}vh)`,
           }}
         >
-          <img
-            alt="Silo Heart Trail"
-            className={styles.title}
-            src={TitleImage}
-          />
+          <img alt={data.heroText} className={styles.title} src={TitleImage} />
+          <h2 className={styles.heroSubtitle}>{data.heroSubtext}</h2>
         </div>
       </div>
     );
