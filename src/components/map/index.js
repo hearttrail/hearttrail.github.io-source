@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 export default () => (
-  <div className={styles.mapContainer}>
-    <div>
+  <div className={styles.mapBlock}>
+    <div className={styles.mapContainer}>
       <iframe
         src="https://snazzymaps.com/embed/119288"
         width="100%"
@@ -12,12 +12,18 @@ export default () => (
         style={{ border: 'none' }}
       />
     </div>
-    <div className={styles.content}>
+    <div className={styles.contentContainer}>
       The Silo Art Trail is Australia's largest outdoor gallery.
       <ul>
-        <li>Day 1: Rupanyup via Sheep Hills to Brim (75 kms)</li>
-        <li>Day 2: Brim via Rosebery to Hopetoun (39km)</li>
-        <li>Day 3: Hopetoun via Lascelles to Patchewallock (77km)</li>
+        <li>
+          <strong>Day 1:</strong> Rupanyup via Sheep Hills to Brim (75 kms)
+        </li>
+        <li>
+          <strong>Day 2:</strong> Brim via Rosebery to Hopetoun (39km)
+        </li>
+        <li>
+          <strong>Day 3:</strong> Hopetoun via Lascelles to Patchewallock (77km)
+        </li>
       </ul>
     </div>
   </div>
