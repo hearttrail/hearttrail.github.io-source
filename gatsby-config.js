@@ -23,6 +23,10 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Silo Heart Trail',
+    description: 'A bike ride to raise awareness for organ donation',
+    image: '',
+    url: 'https://www.hearttrail.com',
+    twitterUsername: '',
   },
   plugins: [
     'gatsby-plugin-sass',
