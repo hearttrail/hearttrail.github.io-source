@@ -36,5 +36,8 @@ export default () => (
         </div>
       </div>
     </div>
+    <p className={styles.disclaimer}>
+      * Source: donatelife.gov.au and transplant.org.au
+    </p>
   </div>
 );
