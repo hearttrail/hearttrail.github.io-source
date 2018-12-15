@@ -33,7 +33,7 @@ class RootIndex extends React.Component {
           </h2>
           <p>
             The heart trail is a self-imposed challenge set by the recipient of
-            life-changing gift: <strong>a heart</strong>. Over a weekend in
+            a life-changing gift: <strong>a heart</strong>. Over a weekend in
             January 2019, James Sheppard and a group of his closest friends and
             family will set out to ride the 200km Silo Art Trail in rural
             Victoria. The purpose? To show that organ donation can be absolutely
@@ -83,29 +83,39 @@ class RootIndex extends React.Component {
           }}
         >
           <p>
-            Physios advised James needed to find a hobby that would keep him fit
-            and healthy, and cycling was it. He now has a new lease on life,
-            allowing him to stay fit and active, enjoy time with family and
-            friends, and look forward to the future. He was lucky that a heart
-            became available in time, but others in Australia are often not so
-            lucky.
+            Physios advised James that he needed to find a hobby that would keep
+            him fit and healthy, and cycling was it. He now has a new lease on
+            life, allowing him to stay fit and active, enjoy time with family
+            and friends, and look forward to the future.
           </p>
+          <Quote>
+            He was lucky that a heart became available in time, but others in
+            Australia are often not so lucky.
+          </Quote>
           <p>
             Heart trail aims to better the odds for those that are waiting. We
             hope to start the conversation for people to discuss their
             preferences with their loved ones and to hopefully decide to
             register.
           </p>
-          <Quote>
+        </ContentBlock>
+        <QuoteBlock>
+          <h2>
             Whether we encourage 1 person or 1000 people to register, lives will
             be changed.
-          </Quote>
+          </h2>
           <p>
-            Registering is just the beginning. Discussing your organ donation
-            preferences with loved ones is equally important as they will have
-            the final say.
+            Register today, but registering is just the beginning. Discussing
+            your organ donation preferences with loved ones is equally important
+            as they will have the final say.
           </p>
-        </ContentBlock>
+          <CtaButton
+            className={styles.ctaButton}
+            href={constants.DONOR_REGISTER_URL}
+          >
+            Join the donor register today
+          </CtaButton>
+        </QuoteBlock>
 
         <div className="wrapper">
           <h2 className="section-headline">Updates</h2>
