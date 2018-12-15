@@ -5,9 +5,9 @@ export default ({
   article,
   description,
   image,
+  instagramUrl,
   pathname,
   title,
-  twitterUsername,
   url,
 }) => {
   const seo = {
@@ -29,9 +29,6 @@ export default ({
       )}
       {seo.image && <meta property="og:image" content={seo.image} />}
       <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
       {seo.title && <meta name="twitter:title" content={seo.title} />}
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />

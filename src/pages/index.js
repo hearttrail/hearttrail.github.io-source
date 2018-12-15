@@ -130,11 +130,11 @@ export const pageQuery = graphql`
   query HomeQuery {
     site {
       siteMetadata {
-        title
         description
-        url
         image
-        twitterUsername
+        instagramUrl
+        title
+        url
       }
     }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
