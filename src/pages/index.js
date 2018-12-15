@@ -6,6 +6,7 @@ import ContentBlock from '../components/content-block';
 import constants from '../constants';
 import CtaButton from '../components/cta-button';
 import Divider from '../components/divider';
+import Footer from '../components/footer';
 import Hero from '../components/hero';
 import Map from '../components/map';
 import Quote from '../components/quote';
@@ -129,6 +130,7 @@ class RootIndex extends React.Component {
             })}
           </ul>
         </div>
+        <Footer {...siteMetadata} />
       </div>
     );
   }
@@ -141,6 +143,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         description
+        email
         image
         instagramUrl
         title
